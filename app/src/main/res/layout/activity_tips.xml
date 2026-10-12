@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tipsPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".Tips">
+
+    <!-- Decorative Backgrounds -->
+    <View
+        android:layout_width="244dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-4dp"
+        android:background="@drawable/c1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginEnd="224dp"
+        android:background="@drawable/c2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Section -->
+    <LinearLayout
+        android:id="@+id/titleSectionTips"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/m_purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tipsIcon"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/tips"
+            android:contentDescription="Tips Icon" />
+
+        <TextView
+            android:id="@+id/tipsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dailytips"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Scrollable Tips Section -->
+    <ScrollView
+        android:id="@+id/scrollTips"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titleSectionTips"
+        app:layout_constraintBottom_toTopOf="@id/addNewTipsSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CATEGORY 1: Daily Reflection -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/day"
+                    android:contentDescription="Reflection Icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dailyreflection"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:background="@drawable/creative"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@color/p_tips">
+
+                    <!-- Point 1 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips1"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Point 2 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips2"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Point 3 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips3"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CATEGORY 2: Goals & Planning -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/goals"
+                    android:contentDescription="Goals Icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tips4"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:background="@color/p_tips"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@color/p_tips">
+
+                    <!-- Point 1 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips5"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Point 2 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips6"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Point 3 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips7"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CATEGORY 3: Self-Growth -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/selflove"
+                    android:contentDescription="Growth Icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/self_growth"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:background="@color/light_purple"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@color/p_tips">
+
+                    <!-- Point 1 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips8"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Point 2 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips9"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <!-- Point 3 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tips10"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CATEGORY 4: Creativity & Inspiration -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/creative"
+                    android:contentDescription="Creativity Icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/creativity_and_inspiration"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                android:background="@color/light_purple">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@color/p_tips">
+
+                        <!-- Point 1 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tips11"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="8dp"/>
+
+                        <!-- Point 2 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tips12"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="8dp"/>
+
+                        <!-- Point 3 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tips13"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Add New Tips Button -->
+    <LinearLayout
+        android:id="@+id/addNewTipsSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationTips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddNewTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addnewtips"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/secondary_color"
+            app:cornerRadius="16dp"/>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationTips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_purple"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

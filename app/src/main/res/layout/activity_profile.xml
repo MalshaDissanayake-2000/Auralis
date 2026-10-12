@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".profile"
+    android:id="@+id/profile">
+
+  <!-- Decorative Circles -->
+  <View
+      android:id="@+id/circleTopLeft"
+      android:layout_width="244dp"
+      android:layout_height="140dp"
+      android:layout_marginStart="-4dp"
+      android:layout_marginTop="-4dp"
+      android:background="@drawable/c1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <View
+      android:id="@+id/circleTopRight"
+      android:layout_width="230dp"
+      android:layout_height="142dp"
+      android:layout_marginTop="-35dp"
+      android:layout_marginEnd="224dp"
+      android:background="@drawable/c2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <View
+      android:id="@+id/circleBottomRight"
+      android:layout_width="242dp"
+      android:layout_height="131dp"
+      android:layout_marginEnd="-4dp"
+      android:layout_marginBottom="-4dp"
+      android:background="@drawable/c1"
+      android:rotation="180"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <View
+      android:id="@+id/circleBottomLeft"
+      android:layout_width="199dp"
+      android:layout_height="114dp"
+      android:layout_marginStart="240dp"
+      android:layout_marginBottom="-4dp"
+      android:background="@drawable/c1"
+      android:backgroundTint="@color/secondary_color"
+      android:rotation="180"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <!-- Fixed Top Section: Profile Image & Info -->
+  <LinearLayout
+      android:id="@+id/fixedHeader"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="24dp"
+      android:gravity="center_horizontal"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_profile"
+        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Malsha Nuwangi"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_color"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age: 24"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_color"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: 123 Main Street, City"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_color"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: malshan@email.com"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_purple" />
+  </LinearLayout>
+
+  <!-- Scrollable Section -->
+  <ScrollView
+      android:id="@+id/scrollProfile"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:fillViewport="true"
+      app:layout_constraintTop_toBottomOf="@id/fixedHeader"
+      app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+      <!-- Days Completed Card -->
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_marginBottom="16dp"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="4dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scaleType="centerCrop"
+              android:src="@drawable/pi01" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom|start"
+              android:orientation="vertical"
+              android:padding="12dp"
+              android:background="#83CDADDC">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Days completed"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A peaceful mind"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+          </LinearLayout>
+        </FrameLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Last 30 Days Mood Statistics -->
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="12dp"
+          android:text="Last 30 days mood statistics"
+          android:textColor="@color/dark_purple"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="180dp"
+          android:layout_marginBottom="16dp"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mood01" />
+      </androidx.cardview.widget.CardView>
+
+      <!-- Motivation Card -->
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="180dp"
+          android:layout_marginBottom="16dp"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="4dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="180dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/p_i03" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="top|center_horizontal"
+              android:layout_marginTop="12dp"
+              android:text="Be the best version of you!"
+              android:textColor="@color/white"
+              android:textSize="24sp"
+              android:textStyle="bold|italic" />
+
+          <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnAction"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom|end"
+              android:layout_margin="12dp"
+              android:text="More"
+              android:textSize="14sp"
+              android:textColor="@android:color/white"
+              android:backgroundTint="@color/dark_purple"
+              app:cornerRadius="12dp" />
+        </FrameLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Achievements Section -->
+      <TextView
+          android:id="@+id/tvAchievements"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="12dp"
+          android:text="Achievements"
+          android:textColor="@color/dark_purple"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:background="@color/light_purple"
+          android:padding="16dp"
+          android:layout_marginBottom="20dp"
+          android:weightSum="3">
+
+        <!-- Achievement 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+          <ImageView
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:src="@drawable/mindful_writter"
+              android:contentDescription="Mindful Writer" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Mindful Writer"
+              android:textColor="@color/dark_purple"
+              android:textSize="14sp"
+              android:layout_marginTop="4dp"
+              android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Achievement 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+          <ImageView
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:src="@drawable/vision_maker"
+              android:contentDescription="Vision Maker" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Vision Maker"
+              android:textColor="@color/dark_purple"
+              android:textSize="14sp"
+              android:layout_marginTop="4dp"
+              android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Achievement 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+          <ImageView
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:src="@drawable/self_love"
+              android:contentDescription="Self Love" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Self Love"
+              android:textColor="@color/dark_purple"
+              android:textSize="14sp"
+              android:layout_marginTop="4dp"
+              android:textAlignment="center" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <!-- Logout Button -->
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btneditprofile"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:layout_marginTop="12dp"
+          android:backgroundTint="@color/secondary_color"
+          android:text="Edit Profile"
+          android:textColor="@android:color/white"
+          android:textSize="18sp"
+          app:cornerRadius="12dp" />
+
+      <!-- Logout Button -->
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnLogout"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:layout_marginTop="12dp"
+          android:backgroundTint="@android:color/holo_red_dark"
+          android:text="Logout"
+          android:textColor="@android:color/white"
+          android:textSize="18sp"
+          app:cornerRadius="12dp" />
+
+    </LinearLayout>
+  </ScrollView>
+
+
+  <!-- Bottom Navigation -->
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomNavigation"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/light_purple"
+      app:itemIconTint="@color/black"
+      app:itemTextColor="@color/black"
+      app:menu="@menu/bottom_nav_menu"
+      app:labelVisibilityMode="labeled"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

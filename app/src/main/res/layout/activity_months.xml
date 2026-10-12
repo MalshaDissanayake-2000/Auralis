@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".Months"
+    android:id="@+id/months">
+
+    <!-- Decorative Backgrounds -->
+    <View
+        android:layout_width="244dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-4dp"
+        android:background="@drawable/c1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginEnd="224dp"
+        android:background="@drawable/c2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Section -->
+    <LinearLayout
+        android:id="@+id/titleSection"
+        android:layout_width="321dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="30dp"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Image View (Logo or Icon) -->
+        <ImageView
+            android:id="@+id/pageIcon"
+            android:layout_width="82dp"
+            android:layout_height="69dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Page Icon"
+            android:src="@drawable/calander" />
+
+        <!-- Title TextView -->
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plan Your Month"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Scrollable months list -->
+    <ScrollView
+        android:layout_width="354dp"
+        android:layout_height="616dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Repeat this block for 12 months -->
+
+            <!-- January Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/january"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="January"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m_01" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="January"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start your new year strong"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnJanuary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- February Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="February"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m_02" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="February"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="February is filled with love and warm hearts."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnfebruary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- March Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="March"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m03" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="March"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="March wakes the world with blooming flowers."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- April Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="May"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m04" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="April"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="April showers refresh the earth with life."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnApril"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- May Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="May"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m05" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="May"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="May dances with sunshine and gentle breezes."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- June Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="June"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m6" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="June"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="June glows with long, golden days"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnJune"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- July Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="July"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m07" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="July"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="July sparkles with joy and celebration."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnJuly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- August Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="August"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m03" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="August"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="August hums with summer’s warmth and laughter."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAugust"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- September Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="March"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m09" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="September"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="September whispers the arrival of autumn."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSeptember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Octomber Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Octomber"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m10" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Octomber"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="October paints the world in bright colors."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnOctomber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- November Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="November"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m11" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="November"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="November gathers us with gratitude and peace."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnNovember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- December Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Background image for month -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="December"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m12" />
+
+                    <!-- Overlay -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/m_purple"
+                        android:padding="12dp">
+
+                        <!-- Left side text -->
+                        <LinearLayout
+                            android:id="@+id/textContainer12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="December"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="December shines with lights, love, and cheer."
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <!-- Open button on right side -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDecember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/secondary_color"
+                            android:text="Open"
+                            android:textColor="@android:color/white"
+                            app:cornerRadius="8dp" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Repeat for March → December with ids: btnMarch, btnApril, ... btnDecember -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_purple"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

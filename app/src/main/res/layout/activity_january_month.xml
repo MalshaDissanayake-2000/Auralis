@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/januaryPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".January_month">
+
+    <!-- Title -->
+    <LinearLayout
+        android:id="@+id/titleSection"
+        android:layout_width="373dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_purple"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="January Icon"
+            android:src="@drawable/m_01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="January"
+            android:textColor="@color/dark_purple"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Calendar View -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="385dp"
+        android:layout_height="327dp"
+        android:layout_margin="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleSection" />
+
+    <ScrollView
+        android:layout_width="398dp"
+        android:layout_height="350dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleSection"
+        app:layout_constraintVertical_bias="0.927">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:useDefaultMargins="true">
+
+            <!-- Day 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/m_purple"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/day1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monthly Planner"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/day1"
+                        android:layout_marginTop="4dp"
+                        android:text="Make today special!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Day 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/m_purple"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/day2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Goals"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/day2"
+                        android:layout_marginTop="4dp"
+                        android:text="Stay positive!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Day 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/m_purple"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/day3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Habit Tracker"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/day3"
+                        android:layout_marginTop="4dp"
+                        android:text="You are strong!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Day 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/m_purple"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/day4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mood Tracker"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/day4"
+                        android:layout_marginTop="4dp"
+                        android:text="Smile today!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Day 5 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/m_purple"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/day5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Budget Tracker"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/day5"
+                        android:layout_marginTop="4dp"
+                        android:text="Keep going!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Day 6 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/m_purple"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/day6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Collection"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/day6"
+                        android:layout_marginTop="4dp"
+                        android:text="Believe in yourself!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_purple"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

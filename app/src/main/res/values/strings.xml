@@ -1,0 +1,57 @@
+<resources>
+    <string name="dailytips">Daily Tips</string>
+    <string name="dailyreflection">Daily Reflection</string>
+    <string name="add_new_tip">Add new tip...</string>
+    <string name="goals_and_planning">Goals and Planning</string>
+    <string name="self_growth">Self-Growth</string>
+    <string name="creativity_and_inspiration">Creativity and Inspiration</string>
+    <string name="tips1">• Write 3 things you are grateful for.</string>
+    <string name="tips2">• Note one challenge you faced and how you handled it.</string>
+    <string name="tips3">• Record a small happy moment from your day.</string>
+    <string name="tips4">Goals and Planning"</string>
+    <string name="tips5">• Set 1–2 realistic goals for the week.</string>
+    <string name="tips6">• Break big tasks into smaller steps.</string>
+    <string name="tips7">• Track progress daily or weekly with checkmarks.</string>
+    <string name="tips8">• Write positive affirmations about yourself.</string>
+    <string name="tips9">• Reflect on lessons learned from mistakes.</string>
+    <string name="tips10">• Note one habit you want to build or improve.</string>
+    <string name="tips11">• Jot down a quote or lyric that inspires you.</string>
+    <string name="tips12">• Sketch, doodle, or paste a photo.</string>
+    <string name="tips13">• Write freely for 5 minutes without stopping.</string>
+    <string name="addnewtips">Add New Tips</string>
+
+    <string name="signup">Sign Up</string>
+    <string name="fullname">Full Name</string>
+    <string name="email">Email</string>
+    <string name="birthday">Birthday</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+
+
+    <string name="login">Login</string>
+    <string name="login_p">If you do not have an account, Sign Up</string>
+
+
+    <string name="hi">Hi Malsha!</string>
+    <string name="yourjournal">Your Journal</string>
+    <string name="months">Months</string>
+    <string name="aboutme">About Me</string>
+    <string name="visionboard">Vision Board</string>
+    <string name="memories">Memories</string>
+    <string name="wishlist">Wish List</string>
+    <string name="bucketlist">Bucket List</string>
+    <string name="mandelaart">Mandela Art</string>
+    <string name="goals">Goals</string>
+    <string name="movie">Movie</string>
+    <string name="books">Books</string>
+    <string name="quicknote">Quick Note</string>
+    <string name="main1">Today is 06 th Augush....</string>
+    <string name="main2">How is your mood now?</string>
+    <string name="happy">Happy</string>
+    <string name="sad">Sad</string>
+    <string name="main3">It is okey to feel down....</string>
+
+    <string name="app_name">Auralis</string>
+
+    ng>
+</resources>
